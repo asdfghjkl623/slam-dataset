@@ -1,57 +1,50 @@
 
 
-# Awesome SLAM Datasets [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
-
-## Awesome SLAM Datasets [中文版本](README-cn.md)
-
+# Awesome SLAM Datasets Chinese [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 ![image](awesome_datasets_thumbnails.png)
->Thumbnail Figures from Complex Urban, NCLT, Oxford robotcar, KiTTi, Cityscapes datasets.
+>复杂城市的缩略图来自 NCLT, Oxford robotcar, KiTTi, Cityscapes 数据集.
 
 
-This repository is the collection of SLAM-related datasets. Among various SLAM datasets, we've selected the datasets provide pose and map information. This repository is linked to the [google site](https://sites.google.com/view/awesome-slam-datasets/). In this repository, the overall dataset chart is represented as simplified version. You can use full version of the chart (made by google spreadsheet) in the [project page](https://sites.google.com/view/awesome-slam-datasets/).
-
-We provide several category for each access of the data.
-
-## News !! (Update: 2019-05-20)
-- In ICRA 2019 (Montreal), workshop on ['Dataset Generation and Benchmarking of SLAM Algorithms for Robotics and VR/AR'](https://sites.google.com/view/icra-2019-workshop/home) will be held!. We  are pretty sure that there will be many 'new' and 'hot' datasets intruduced at the workshop.
-- We add [evaluation section](#evaluation) (Tools for trajectory and SLAM methods evaluation)
+此 GitHub Repo 是 SLAM 相关数据集的整合。我们整理出了提供姿位姿和地图信息的各种SLAM数据集。 在本 Repo 中，整个数据集图表表示为简化版本。 您可以在 [awesome-slam-datasets](https://sites.google.com/view/awesome-slam-datasets/) 中查看完整版表格（需要科学上网）。我们并对数据集进行了不同分类。
 
 
-## Category
-- [Evaluation](#evaluation)
+ 
+
+## 类别
+- [评估工具](#评估工具)
   - Evaluation Methods of SLAM
-- [Topic](#categorized-by-topic)
-  - [Odometry](#odometry): Dataset for odometry Benchmark
-  - [Mapping](#mapping): Dataset for mapping task
-  - [Place Recognition](#place-recognition): Dataset gives correspondences of places (images)
-  - [Localization](#localization): Dataset for metric-level localization
-  - [Perception](#perception): Dataset with semantic labels / correspondences
+- [主题](#按主题分类)
+  - [里程计](#里程计): Dataset for odometry Benchmark
+  - [建图](#建图): Dataset for mapping task
+  - [多样场景](#多样场景): Dataset gives correspondences of places (images)
+  - [定位](#定位): Dataset for metric-level localization
+  - [感知](#感知): Dataset with semantic labels / correspondences
 
-- [Characteristics](#categorized-by-characteristics)
-  - [Large-scale](#large-scale): City-scale map, kilometer level Map
-  - [Long-term](#long-term): Multi-session, long-term data collection
-  - [Map Complexity](#map-complexity): Variation of mapping structures
-  - [Extreme Condition](#extreme-condition): Extreme environment, motions
+- [特点](#按特点分类)
+  - [大规模](#大规模): City-scale map, kilometer level Map
+  - [长时间](#长时间): Multi-session, long-term data collection
+  - [复杂地图](#复杂地图): Variation of mapping structures
+  - [极端情况](#极端情况): Extreme environment, motions
 
-- [Platform](#categorized-by-platform)
-    - [Vehicle (Veh)](#vehicle): Commercial Vehicle (Four-wheeled on the road)
-    - [Mobile robot (Mob)](#mobile-robot): Mobile Robots (Ex. Husky, Rover.. )
-    - [Unmanned Aerial Vehicle (UAV)](#unmanned-aerial-vehicle): Unmanned aerial robots include drone.
-    - [Autonomous Underwater Vehicle (AUV)](#autonomous-underwater-vehicle): Underwater robots include ROV for simplicity.
-    - [Unmanned Surface Vehicle (USV)](#unmanned-surface-vehicle): Water surface vehicle such as canoe and boat.
-    - [Hand-held Device (Hand)](#hand-held-device): Hand-held platform by human
+- [载体平台](#按载体平台分类)
+    - [汽车](#汽车): Commercial Vehicle (Four-wheeled on the road)
+    - [移动机器人](#移动机器人): Mobile Robots (Ex. Husky, Rover.. )
+    - [无人机](#无人机): Unmanned aerial robots include drone.
+    - [水下自主航行器](#水下自主航行器): Underwater robots include ROV for simplicity.
+    - [水面无人艇](#水面无人艇): Water surface vehicle such as canoe and boat.
+    - [手持设备](#手持设备): Hand-held platform by human
 
-- [Environment](#categorized-by-platform)
-    - [Urban](#urban): City, campus, town, and infrastructures
-    - [Indoor](#indoor): Indoor environment
-    - [Terrain](#terrain): Rough terrain, underground, lake and farm
-    - [Underwater](#underwater): Underwater floor, cave
+- [环境](#按环境分类)
+    - [城市](#城市): City, campus, town, and infrastructures
+    - [室内](#室内): Indoor environment
+    - [地形](#地形): Rough terrain, underground, lake and farm
+    - [水下](#水下): Underwater floor, cave
 
-## Overall datasets chart (Simplified Version)
-[Link to Full version](https://sites.google.com/view/awesome-slam-datasets/)
+## 数据集表格总览 (简版)
+点击[查看完整版链接](https://sites.google.com/view/awesome-slam-datasets/)
 
-| Shortname                                                                                                | Affiliation  | Year | Platform   | Publication | Environment           | GT-Pose | GT-Map | IMU | GPS | Labels | Lidar      | Cameras | RGBD | Event | Radar | Sonar | DVL | Other                   |
+| 名称                                                                                                | 机构  | 年份 | 载体平台   | 出版来源 | 环境           | 是否有 GT-Pose | GT-Map | IMU | GPS | 标签 | Lidar      | Camera | RGBD | 事件相机 | Radar | 声呐 | 多普勒速度记录 | 其他                   |
 |----------------------------------------------------------------------------------------------------------|--------------|------|------------|-------------|-----------------------|---------|--------|-----|-----|--------|------------|---------|------|-------|-------|-------|-----|-------------------------|
 | [Collaborative SLAM Dataset (CSD)](https://github.com/torrvision/CollaborativeSLAMDataset)               | Oxford       | 2018 | Hand       | TVCG/ISMAR  | Indoor                | O       | O      | O   |     |        |            | O       | O    |       |       |       |     | Tango (Asus ZenFone AR)
 | [ADVIO Dataset](https://github.com/AaltoVision/ADVIO)               | Aalto U          | 2018 | Hand | ECCV                | Urban      | O | O | O |   |   |   | O |   |   |   |   |   | iPhone, Tango, Pixel                     |
@@ -113,15 +106,15 @@ We provide several category for each access of the data.
 | [FABMAP](http://www.robots.ox.ac.uk/~mobile/IJRR_2008_Dataset/)                                          | Oxford-Robot | 2008 | Veh        | IJRR        | Urban                 |         |        |     | O   |        |            | O       |      |       |       |       |     |                         |
 
 
-## Evaluation
+## 评估工具
 _Evaluation methods for SLAM benchmarks_
 - Trajectory Evaluation with Alignment [[Paper](http://rpg.ifi.uzh.ch/docs/IROS18_Zhang.pdf)], [[Code](https://github.com/uzh-rpg/rpg_trajectory_evaluation)]
 - Python package for the evaluation of odometry and SLAM [[Code](https://michaelgrupp.github.io/evo/)]
 - SLAMBench2.0: SLAM performance evaluation framework [[Code](https://github.com/pamela-project/slambench2)]
 
-## Categorized By Topic
+## 按主题分类
 
-### Odometry
+### 里程计
 _Dataset for odometry Benchmark_
 - [TUM-Visual-Inertial](https://vision.in.tum.de/data/datasets/visual-inertial-dataset)
 - [Visual-Inertial Canoe Dataset](https://databank.illinois.edu/datasets/IDB-9342111)
@@ -141,7 +134,7 @@ _Dataset for odometry Benchmark_
 - [Stereo Plenoptic Odometry Dataset](https://www.hs-karlsruhe.de/odometry-data/)
 
 
-### Mapping
+### 建图
 _Dataset for mapping task_
 - [Collaborative SLAM Dataset (CSD)](https://github.com/torrvision/CollaborativeSLAMDataset)
 - [Complex Urban](http://irap.kaist.ac.kr/dataset/)
@@ -157,7 +150,7 @@ _Dataset for mapping task_
 - [Ford Campus Vision and Lidar Dataset](http://robots.engin.umich.edu/SoftwareData/Ford)
 - [InteriorNet](https://interiornet.org/)
 
-### Place Recognition
+### 多样场景
 _Dataset gives correspondences of places (images)_
 - [Visual-Inertial Canoe Dataset](https://databank.illinois.edu/datasets/IDB-9342111)
 - [Symphony Lake Dataset](http://dream.georgiatech-metz.fr/?q=node/79)
@@ -166,7 +159,7 @@ _Dataset gives correspondences of places (images)_
 - [New College Vision and Laser Data Set](http://www.robots.ox.ac.uk/NewCollegeData/)
 - [FABMAP Dataset](http://www.robots.ox.ac.uk/~mobile/IJRR_2008_Dataset/)
 
-### Localization
+### 定位
 _Dataset for metric-level localization_
 - [Cambridge Landmark Dataset](http://mi.eng.cam.ac.uk/projects/relocalisation/)
 - [KITTI Vision Benchmark Suite](http://www.cvlibs.net/datasets/kitti/index.php)
@@ -174,7 +167,7 @@ _Dataset for metric-level localization_
 - [San Francisco Landmark Dataset](https://sites.google.com/site/chenmodavid/datasets)
 
 
-### Perception
+### 感知
 _Dataset with semantic labels / correspondences_
 - [KAIST Day/Night Dataset](https://sites.google.com/view/multispectral/home)
 - [Robot @ Home Dataset](http://mapir.isa.uma.es/mapirwebsite/index.php/mapir-downloads/203-robot-at-home-dataset)
@@ -185,9 +178,9 @@ _Dataset with semantic labels / correspondences_
 - [Multi-Sensor Perception (Marulan) Dataset ](http://sdi.acfr.usyd.edu.au/)
 - [InteriorNet](https://interiornet.org/)
 
-## Categorized By Characteristics
+## 按特点分类
 
-### Large-scale
+### 大规模
 _City-scale map, kilometer level Map_
 - [Complex Urban](http://irap.kaist.ac.kr/dataset/)
 - [Multi Vehicle Stereo Event Camera Dataset](https://docs.google.com/spreadsheets/d/1mudM7LxXv09ywuQGDp3t_RlIjIdwzg_ZaMu78agLmH4/edit#gid=0)
@@ -201,7 +194,7 @@ _City-scale map, kilometer level Map_
 - [Kagaru Airborne Stereo Dataset Dataset](http://asrl.utias.utoronto.ca/~mdw/kagarudataset.html)
 - [ACFR Marine Robotics Dataset](http://marine.acfr.usyd.edu.au/datasets/)
 
-### Long-term
+### 长时间
 _Multi-session, long-term data collection_
 - [KAIST Day/Night Dataset](https://sites.google.com/view/multispectral/home)
 - [Visual-Inertial Canoe Dataset](https://databank.illinois.edu/datasets/IDB-9342111)
@@ -211,7 +204,7 @@ _Multi-session, long-term data collection_
 - [Alderley Day/Night Dataset](https://wiki.qut.edu.au/pages/viewpage.action?pageId=181178395)
 - [St Lucia Multiple Times of Day](https://wiki.qut.edu.au/display/cyphy/St+Lucia+Multiple+Times+of+Day)
 
-### Map Complexity
+### 复杂地图
 _Variation of mapping structures_
 - [Complex Urban](http://irap.kaist.ac.kr/dataset/)
 - [Multi Vehicle Stereo Event Camera Dataset](https://docs.google.com/spreadsheets/d/1mudM7LxXv09ywuQGDp3t_RlIjIdwzg_ZaMu78agLmH4/edit#gid=0)
@@ -220,7 +213,7 @@ _Variation of mapping structures_
 - [KITTI Vision Benchmark Suite](http://www.cvlibs.net/datasets/kitti/index.php)
 - [Challenging data sets for point cloud registration - algorithms](https://projects.asl.ethz.ch/datasets/doku.php?id=laserregistration:laserregistration)
 
-### Extreme Condition
+### 极端情况
 _Extreme environment, motions_
 - [Underwater Caves SONAR and Vision Dataset](http://cirs.udg.edu/caves-dataset/): Underwater Environment
 - [Chilean Underground Mine Dataset](http://dataset.amtc.cl/#): Underground Environment
@@ -228,9 +221,9 @@ _Extreme environment, motions_
 - [EuRoC MAV Dataset](https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets): Fast motion
 - [Multi-Sensor Perception (Marulan) Dataset ](http://sdi.acfr.usyd.edu.au/):  Smoky, dust, and Rain condition
 
-## Categorized by Platform
+## 按载体平台分类
 
-### Vehicle
+### 汽车
 _Commercial Vehicle (Four-wheeled on the road)_
 - [Complex Urban Dataset](http://irap.kaist.ac.kr/dataset/)
 - [Multi Vehicle Stereo Event Camera Dataset](https://docs.google.com/spreadsheets/d/1mudM7LxXv09ywuQGDp3t_RlIjIdwzg_ZaMu78agLmH4/edit#gid=0)
@@ -252,7 +245,7 @@ _Commercial Vehicle (Four-wheeled on the road)_
 - [FABMAP Dataset](http://www.robots.ox.ac.uk/~mobile/IJRR_2008_Dataset/)
 
 
-### Mobile Robot
+### 移动机器人
 _Mobile Robots (Ex. Husky, Rover.. )_
 - [Rosario Dataset](http://www.cifasis-conicet.gov.ar/robot/doku.php)
 - [Sugar Beets 2016, Agricultural Robot Dataset](http://www.ipb.uni-bonn.de/data/sugarbeets2016/)
@@ -268,7 +261,7 @@ _Mobile Robots (Ex. Husky, Rover.. )_
 - [TUM RGB-D SLAM Dataset and Benchmark](https://vision.in.tum.de/data/datasets/rgbd-dataset)
 - [New College Vision and Laser Data Set](http://www.robots.ox.ac.uk/NewCollegeData/)
 
-### Unmanned Aerial Vehicle
+### 无人机
 _Unmanned aerial robots include drone_
 - [Zurich Urban Micro Aerial Vehicle Dataset](http://rpg.ifi.uzh.ch/zurichmavdataset.html)
 - [Event-Camera Dataset and Simulator](http://rpg.ifi.uzh.ch/davis_data.html)
@@ -279,20 +272,20 @@ _Unmanned aerial robots include drone_
 
 
 
-### Autonomous Underwater Vehicle
+### 水下自主航行器
 _Underwater robots include ROV for simplicity_
 - [Aqualoc Underwater Dataset](http://www.lirmm.fr/aqualoc/)
 - [Underwater Caves SONAR and Vision Dataset](http://cirs.udg.edu/caves-dataset/)
 - [ACFR Marine Robotics Dataset](http://marine.acfr.usyd.edu.au/datasets/)
 
 
-### Unmanned Surface Vehicle
+### 水面无人艇
 _Water surface vehicle such as canoe and boat_
 - [Visual-Inertial Canoe Dataset](https://databank.illinois.edu/datasets/IDB-9342111)
 - [Symphony Lake Dataset](http://dream.georgiatech-metz.fr/?q=node/79)
 
 
-### Hand-held Device
+### 手持设备
 _Hand-held platform by human_
 - [Collaborative SLAM Dataset (CSD)](https://github.com/torrvision/CollaborativeSLAMDataset)
 - [SceneNet RBG-D Dataset](https://robotvault.bitbucket.io/scenenet-rgbd.html)
@@ -307,8 +300,8 @@ _Hand-held platform by human_
 - [InteriorNet](https://interiornet.org/)
 - [Stereo Plenoptic Dataset](https://www.hs-karlsruhe.de/odometry-data/)
 
-## Categorized by Environment
-### Urban
+## 按环境分类
+### 城市
 _City, campus, town, and infrastructures_
 - [ADVIO Dataset](https://github.com/AaltoVision/ADVIO)
 - [Stereo Plenoptic Dataset](https://www.hs-karlsruhe.de/odometry-data/)
@@ -340,7 +333,7 @@ _City, campus, town, and infrastructures_
 - [Rawseeds In/Outdoor Dataset](http://www.rawseeds.org/home/category/benchmarking-toolkit/datasets/)
 - [FABMAP Dataset](http://www.robots.ox.ac.uk/~mobile/IJRR_2008_Dataset/)
 
-### Indoor
+### 室内
 _Indoor environment_
 - [Collaborative SLAM Dataset (CSD)](https://github.com/torrvision/CollaborativeSLAMDataset)
 - [InteriorNet](https://interiornet.org/)
@@ -361,7 +354,7 @@ _Indoor environment_
 - [Google Cartographer](https://google-cartographer-ros.readthedocs.io/en/latest/data.html)
 
 
-### Terrain
+### 地形
 _Rough terrain, underground, lake and farm_
 - [Rosario Agricultural Dataset](http://www.cifasis-conicet.gov.ar/robot/doku.php)
 - [Visual-Inertial Canoe Dataset](https://databank.illinois.edu/datasets/IDB-9342111)
@@ -378,7 +371,7 @@ _Rough terrain, underground, lake and farm_
 - [Multi-Sensor Perception (Marulan) Dataset ](http://sdi.acfr.usyd.edu.au/)
 
 
-### Underwater
+### 水下
 _Underwater floor, cave_
 - [Aqualoc Underwater Dataset](http://www.lirmm.fr/aqualoc/)
 - [Underwater Caves SONAR and Vision Dataset](http://cirs.udg.edu/caves-dataset/)
@@ -392,3 +385,5 @@ Please Feel free to send a [pull request](https://github.com/youngguncho/awesome
 [![CC0](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 
 To the extent possible under law, [Younggun Cho](https://github.com/youngguncho) has waived all copyright and related or neighboring rights to this work.
+
+Authorized Translation by [Yvon-Shong](https://github.com/Yvon-Shong)
